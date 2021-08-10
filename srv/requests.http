@@ -1,0 +1,74 @@
+### Get Users
+GET http://localhost:4004/project/Users(9000)
+
+### Move user to another project
+POST http://localhost:4004/project/moveUserToAnotherProject
+Content-Type: application/json
+
+{
+    "userId": 2000,
+    "projectId": 5
+}
+
+### Get Projects
+GET http://localhost:4004/project/Projections
+
+### Get Project Members
+GET http://localhost:4004/project/getProjectMembers(id='3')
+
+### Get Date
+GET http://localhost:4004/project/getDATE()
+
+### Add User
+POST http://localhost:4004/project/Users
+Content-Type: application/json
+
+{
+    "id" : 99000,
+    "name"  : "Jane Doe",
+    "email" : "jane.doe@gmail.com",
+    "phone": "555-555-5555",
+    "gender": "Male",
+    "address_street": "8000 Avalon Blvd",
+    "address_city": "Alpharetta",
+    "address_state": "GA",
+    "address_zip": "30004",
+    "project_id": 3
+}
+
+###update User
+PATCH   http://localhost:4004/project/Users(2000)
+Content-Type: application/json
+
+{
+    "id" : 2000,
+    "name"  : "Peter John",
+    "email" : "jane.doe@gmail.com",
+    "phone": "555-777-9999",
+    "gender": "Female",
+    "address_street": "8000 Avalon Blvd",
+    "address_city": "Alpharetta",
+    "address_state": "GA",
+    "address_zip": "30004",
+    "project_id": 5
+}
+
+###delete User
+DELETE   http://localhost:4004/project/Users(1000)
+Content-Type: application/json
+
+{
+    "id" : 1000,
+    
+}
+
+###To test actions click on the post link as shown below from requests.http file.
+
+### Move user to another project
+POST http://localhost:4004/project/moveUserToAnotherProject
+Content-Type: application/json
+
+{
+    "userId": 2000,
+    "projectId": 7
+}
